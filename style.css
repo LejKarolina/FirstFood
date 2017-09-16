@@ -1,0 +1,38 @@
+/* 
+ * Apply a natural box layout model to all elements, but allowing components to change.
+ * https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* 
+    overriding default user agent styles 
+*/
+body {
+    margin: 0;
+}
+
+/* pseudo elements */
+/* why border box??? */
+
+h1 {
+    color: red;
+}
+
+h1:before {
+    content: "~~~~~";
+    color: green;
+}
+
+h1:after {
+    content: "~~~~~";
+    color: blue;
+}
+
+h1:hover {
+    color: yellow;
+}

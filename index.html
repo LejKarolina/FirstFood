@@ -1,0 +1,61 @@
+<!-- 
+    Hello! I am HTML and this is my "Document Type". 
+    There's a long and now irrelevant history of DOCTYPE; these days, plain "html" is the way to go.
+    https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+ -->
+<!DOCTYPE html>
+<html>
+
+<!-- Head comes with metadata; stuff that is important but not visible directly on page -->
+<head>
+    <!-- 
+        UTF-8 solves all your problems with character encoding!
+        For extra knowledge read http://kunststube.net/encoding/#fnref:dna
+    -->
+    <meta charset="UTF-8">
+    <!--
+        Linking external CSS file. This should be in header,
+        because browser will use it to render colors on a webpage;
+        we want to avoid blinking and flickering which would happen if browser
+        discovered halfway through loading that there are some CSS!
+    -->
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all">
+    <!-- Displayed in browser tab and few other places -->
+    <title>Application name</title>
+</head>
+
+<!-- Body comes with elements that we want the user to see and interact -->
+<body>
+    <h1>Apps title</h1>
+
+    <form id="foodForm">
+        <label>
+            Food
+            <input name="food" />
+        </label>
+        <!-- Pushing a button inside a form submits it -->
+        <button>✔</button>
+        <button>✕</button>
+    </form>
+
+    <h2>List of tried foods</h2>
+
+    <!-- Later, we will fill this in dynamically -->
+    <ul>
+        <li>Carrot ✔ 9. 9. 2017</li>
+        <li>Apple ✕ 8. 9. 2017</li>
+        <li>Pumpkin ✔ 7. 9. 2017</li>
+        <li>Potato ✕ 6. 9. 2017</li>
+        <li>Courgette ✔ 5. 9. 2017</li>
+    </ul>
+    <!--
+        javascript, unlike CSS, should be included last; that is because
+        if we want to touch HTML elements with functions such as document.getElementById,
+        first we need to make sure that they already exist!
+        You may have seen $(document).ready() or DOMContentLoaded,
+        but really the simplest way is to put the script just before </body>.
+    -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
