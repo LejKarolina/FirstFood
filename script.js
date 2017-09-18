@@ -1,5 +1,21 @@
-function addNewItem(foodName, positive) {
-    console.log("Adding new item!", foodName, positive)
+
+function getButton(value)
+{
+    console.log("Pressing button.", value)
+    addNewItem(document.getElementById("foodForm").food.value, value) 
+}
+
+function addNewItem(foodName, value){
+    var today = new Date()
+    var dd = today.getDate()
+    var mm = today.getMonth()
+    var yy = today.getFullYear()
+    var today = dd + "." + mm + "." + yy 
+    var ul = document.getElementById("theList")
+    var newElement = document.createElement("li")
+    newElement.appendChild(document.createTextNode(foodName + " " + value + " " + today))
+    ul.appendChild(newElement)
+    console.log("Adding new item.", foodName)
 }
 
 function handleFormSubmit(event) {
@@ -10,7 +26,7 @@ function handleFormSubmit(event) {
     console.log("foodName", foodName)
     // TODO zjistit co je napsane v policku
     // TODO zjistit ci positive nebo ne
-    addNewItem(foodName, positive)
+    // addNewItem(foodName, )
 }
 
 // TODO poslouchat na form submit
