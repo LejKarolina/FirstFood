@@ -10,7 +10,7 @@ function addNewItem(foodName, value){
     var dd = today.getDate()
     var mm = today.getMonth()
     var yy = today.getFullYear()
-    var today = dd + "." + (mm + 1) + "." + yy 
+    var today = dd + "." + mm + "." + yy 
     var ul = document.getElementById("theList")
     var newElement = document.createElement("li")
     newElement.appendChild(document.createTextNode(foodName + " " + value + " " + today))
