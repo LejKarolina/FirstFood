@@ -21,7 +21,7 @@
     -->
     <link rel="stylesheet" href="./style.css" type="text/css" media="all">
     <!-- Displayed in browser tab and few other places -->
-    <title>Application name</title>
+    <title>First Food</title>
 </head>
 
 <!-- Body comes with elements that we want the user to see and interact -->
@@ -34,14 +34,14 @@
             <input name="food" />
         </label>
         <!-- Pushing a button inside a form submits it -->
-        <button>✔</button>
-        <button>✕</button>
+        <button id="ok" onclick="getButton(this.value)" value="✔">✔</button>
+        <button id="nok" onclick="getButton(this.value)" value="✕">✕</button>
     </form>
 
     <h2>List of tried foods</h2>
 
     <!-- Later, we will fill this in dynamically -->
-    <ul>
+    <ul id="theList">
         <li>Carrot ✔ 9. 9. 2017</li>
         <li>Apple ✕ 8. 9. 2017</li>
         <li>Pumpkin ✔ 7. 9. 2017</li>
@@ -56,6 +56,7 @@
         but really the simplest way is to put the script just before </body>.
     -->
     <script src="./script.js"></script>
+       
 </body>
 
 </html>
